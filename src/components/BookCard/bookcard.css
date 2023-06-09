@@ -1,16 +1,15 @@
 .book_card_container {
     height: 7rem;
-    /* background-color: red; */
     width: 80%;
     margin-block-start: 1.3rem;
     border : 1px solid var(--neutral-gray);
     border-radius: 0.3rem;
     transition : 0.3s all ease-in-out;
+    position: relative
 }
 
 .book_card_container:hover {
     box-shadow : 0 0 0.6rem var(--primary-color);
-    cursor : pointer;
 }
 
 .book_card__subcontainer {
@@ -36,6 +35,7 @@
     font-size: 1.5rem;
     color: var(--primary-color-dark);
     margin-block-end: 0.3rem;
+    cursor: pointer;
 }
 
 .book__author__year__styles {
@@ -66,4 +66,99 @@
 
 .details_button:active {
     transform: scale(0.95);
+}
+
+/* Modal Styling */
+
+.book_detail_main_container{
+    background-color: var(--neutral-black);
+    opacity: 70%;
+    height: 100vh;
+    width : 100%;
+    z-index : 99;
+    position : absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.book_detail_container {
+    height: 100%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_detail_sub_container{
+    background-color: white;
+    height : 70%;
+    width : 50%;
+    border-radius : 0.7rem;
+    display: flex;
+    gap: 1.1rem;
+    overflow : hidden;
+    position: relative;
+}
+
+
+.book_cover_page_modal {
+    height: 100%;
+    width: 40%;
+    background-color: blue;
+}
+
+.book_details_container_modal {
+    height: 100%;
+    width : 75%;
+    padding-block : 0.7rem;
+}
+.book__title_modal {
+    font-size: 2rem;
+    color: var(--primary-color-dark);
+    padding-block-end: 1rem;
+    margin-block-end: 0.8rem;
+    border-bottom: 1px solid var(--primary-color-dark)
+
+}
+
+.book__author__year__styles_modal {
+    color : var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.book__author_modal {
+    margin-block-end : 0.5rem
+}
+
+.view_details_button_ {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.button_container {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.return_button {
+    background-color : orange;
+}
+
+
+.close {
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding-block-end: 0.2rem;
+    color: red;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1.4rem;
+    top: 1.2rem;
+    cursor: pointer;
 }
