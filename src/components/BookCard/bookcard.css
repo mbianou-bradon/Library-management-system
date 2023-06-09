@@ -1,0 +1,69 @@
+.book_card_container {
+    height: 7rem;
+    /* background-color: red; */
+    width: 80%;
+    margin-block-start: 1.3rem;
+    border : 1px solid var(--neutral-gray);
+    border-radius: 0.3rem;
+    transition : 0.3s all ease-in-out;
+}
+
+.book_card_container:hover {
+    box-shadow : 0 0 0.6rem var(--primary-color);
+    cursor : pointer;
+}
+
+.book_card__subcontainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 1.2rem;
+    position: relative;
+}
+
+.book_card_cover_image {
+    height: 100%;
+    width: 10%;
+    background-color: blue;
+}
+
+.book_details_container {
+    height: 100%;
+    width : 75%;
+    padding-block : 0.7rem;
+}
+.book__title {
+    font-size: 1.5rem;
+    color: var(--primary-color-dark);
+    margin-block-end: 0.3rem;
+}
+
+.book__author__year__styles {
+    color : var(--primary-color);
+    font-size: 1rem;
+}
+
+.book__author {
+    margin-block-end : 0.5rem
+}
+
+.view_details_button {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.details_button {
+    padding-inline: 1rem;
+    padding-block: 0.7rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.details_button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.details_button:active {
+    transform: scale(0.95);
+}

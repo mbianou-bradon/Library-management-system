@@ -1,9 +1,10 @@
+import React from "react"
 import "./navbar.css"
 import { ImSearch } from "react-icons/im"
 import { RxPerson } from "react-icons/rx"
 
 export default function Navbar(){
-
+    const [isSignIn, setIsSignIn] = React.useState(false);
 
     return (
         <nav>
@@ -26,16 +27,19 @@ export default function Navbar(){
             <div>
                 {/* Sign up Container */}
                 <div>
-                    <button>Sign in</button>
-                    <div className="user_detail_container">
-                        <div className="username_container">
-                            <p>Mbianou bradon</p>
+                    {isSignIn?
+                        <button>Sign in</button>
+                        :
+                        <div className="user_detail_container">
+                            <div className="username_container">
+                                <p>Mbianou bradon</p>
+                            </div>
+                            {/* Person Icon */}
+                            <div className="icon_style">
+                                <RxPerson />
+                            </div>
                         </div>
-                        {/* Person Icon */}
-                        <div className="icon_style">
-                            <RxPerson />
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </nav>
