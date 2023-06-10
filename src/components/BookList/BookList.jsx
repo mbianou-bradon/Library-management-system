@@ -3,10 +3,13 @@ import "./booklist.css"
 import BookCard from "../BookCard/BookCard"
 import StudentTable from "../StudentTable/StudentTable";
 import BookTable from "../../BookTable/BookTable";
+import { store } from "../../redux/store";
 
 export default function BookList(){
+    const admin = store.getState().role.role
+    const role = admin === "admin"? true : false
 
-    const [isAdmin, setIsAdmin] = React.useState(true);
+    const [isAdmin, setIsAdmin] = React.useState(role);
 
 
     return (

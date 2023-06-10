@@ -2,10 +2,14 @@ import React from "react"
 import "./navbar.css"
 import { ImSearch } from "react-icons/im"
 import { RxPerson } from "react-icons/rx"
+import { store } from "../../redux/store"
 
 export default function Navbar(){
+    const admin = store.getState().role.role
+    const role = admin === "admin"? true : false
+
     const [isSignIn, setIsSignIn] = React.useState(false);
-    const [isAdmin, setIsAdmin] = React.useState(true);
+    const [isAdmin, setIsAdmin] = React.useState(role);
 
     return (
         <nav>

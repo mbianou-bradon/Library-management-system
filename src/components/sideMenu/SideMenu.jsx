@@ -3,9 +3,14 @@ import "./sideMenu.css"
 import { GoBook } from "react-icons/go"
 import { BsPersonFillExclamation, BsPersonFillSlash } from "react-icons/bs"
 import { FaBookReader } from "react-icons/fa"
+import { store } from "../../redux/store"
+
 
 export default function SideMenu(){
-    const [isAdmin, setIsAdmin] = React.useState(true)
+    const admin = store.getState().role.role
+    const role = admin === "admin"? true : false
+
+    const [isAdmin, setIsAdmin] = React.useState(role)
 
     return (
         <div className="sidebar_container">
