@@ -4,6 +4,7 @@ import { GoBook } from "react-icons/go"
 import { BsPersonFillExclamation, BsPersonFillSlash } from "react-icons/bs"
 import { FaBookReader } from "react-icons/fa"
 import { store } from "../../redux/store"
+import { NavLink } from "react-router-dom"
 
 
 export default function SideMenu(){
@@ -11,6 +12,8 @@ export default function SideMenu(){
     const role = admin === "admin"? true : false
 
     const [isAdmin, setIsAdmin] = React.useState(role)
+
+    const borrowedbook = "borrowedbook"
 
     return (
         <div className="sidebar_container">
@@ -74,20 +77,28 @@ export default function SideMenu(){
                 </div>
                 <ul className="navigation__links">
                     <li>
-                        <GoBook className="nav_icon"/>
-                        All Books
+                        <NavLink to={"/"} className={({isActive})=> !isActive? "nav_link ": "nav_link_active"}>
+                            <GoBook className="nav_icon"/>
+                            All Books
+                        </NavLink>
                     </li>
                     <li>
-                        <FaBookReader className="nav_icon"/>
-                        Borrowed Books
+                        <NavLink to={`/book/${borrowedbook}`} className={({isActive})=> !isActive? "nav_link" : "nav_link_active"}>
+                            <FaBookReader className="nav_icon"/>
+                            Borrowed Books
+                        </NavLink>
                     </li>
                     <li>
-                        <BsPersonFillExclamation className="nav_icon"/>
-                        Sanctioned Students
+                        <NavLink to={"/sanctionstudent"} className={({isActive})=> !isActive? "nav_link" : "nav_link_active"}>
+                            <BsPersonFillExclamation className="nav_icon"/>
+                            Sanctioned Students
+                        </NavLink>
                     </li>
                     <li>
-                        <BsPersonFillSlash className="nav_icon"/>
-                        Dismissed Students
+                        <NavLink to={"/dismissedstudent"} className={({isActive})=> !isActive? "nav_link" : "nav_link_active"}>
+                            <BsPersonFillSlash className="nav_icon"/>
+                            Dismissed Students
+                        </NavLink>
                     </li>
                     {/* <BiSolidBookAdd/> */}
                 </ul>

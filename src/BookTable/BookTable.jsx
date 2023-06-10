@@ -1,13 +1,22 @@
 import React from "react"
 import { bookData } from "../studentData"
 import "./booktable.css"
+import { useParams } from "react-router-dom"
 
 export default function BookTable(){
     const [bookDataInfo, setBookDataInfo] = React.useState(bookData)
 
+    const { borrowedbook } = useParams();
+
     const handleFilter = () => {
         setBookDataInfo(bookDataInfo.filter(book => book.status === "Borrowed"));
     }
+
+    if(borrowedbook === "borrowedbook"){
+        handleFilter();
+    }
+    
+    
     return(
         <div className="table_container">
             <table>
