@@ -1,4 +1,4 @@
-import studentData from "../../studentData"
+import { studentData } from "../../studentData"
 import "./studenttable.css"
 
 export default function StudentTable(){

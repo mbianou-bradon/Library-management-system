@@ -2,6 +2,7 @@ import React from "react"
 import "./booklist.css"
 import BookCard from "../BookCard/BookCard"
 import StudentTable from "../StudentTable/StudentTable";
+import BookTable from "../../BookTable/BookTable";
 
 export default function BookList(){
 
@@ -11,7 +12,8 @@ export default function BookList(){
     return (
         <>
         {isAdmin?
-            <StudentTable/>
+            // <StudentTable/>
+            <BookTable />
             :
             <div className="book_list_container">
                 <div>
