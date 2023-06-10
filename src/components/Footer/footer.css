@@ -1,0 +1,12 @@
+
+
+footer {
+    height: 10vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color : var(--primary-color-dark);
+    margin-block-start: 3rem;
+    color: var(--neutral-gray);
+    font-size: 0.8rem
+}
