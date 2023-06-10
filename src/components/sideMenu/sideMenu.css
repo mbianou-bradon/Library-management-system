@@ -1,0 +1,62 @@
+.sidebar_container {
+    width: 40%;
+    padding-inline: 3rem;
+    padding-block: 3rem;
+}
+.content__filtering {
+    font-size: 0.8rem;
+    margin-block-end: 2rem;
+    text-align: center;
+}
+
+
+.list__of__different__content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.list__of__different__content > li{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+.list__of__different__content > li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.filter_subject_icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.report {
+    font-size: 0.7rem;
+    color: var(--neutral-black);
+    margin-block: 2rem;
+}
+
+.report button {
+    margin-block-start: 1.5rem;
+    background-color: var(--primary-color-dark);
+    width: 100%;
+    padding-block: 0.7rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.report button:hover{
+    background-color: var(--neutral-black);
+}
+span {
+    color: red;
+}

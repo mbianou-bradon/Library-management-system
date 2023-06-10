@@ -11,7 +11,7 @@ export default function Navbar(){
             {/* Logo Container */}
             <div className="logo_container">
                 <div>
-                    <h2>Libra</h2>
+                    <h2>Libra<span>Book</span></h2>
                 </div>
             </div>
             {/* Search Bar Container */}

@@ -10,3 +10,8 @@
   --neutral-black : #020202;
   --neutral-gray : #9DA2AB;
 }
+
+main {
+  display: flex;
+  margin-block-start: 5rem;
+}

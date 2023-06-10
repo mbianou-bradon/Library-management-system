@@ -1,11 +1,11 @@
 import "./bookdetails.css"
 
 
-export default function BookDetails({closeModal}){
+export default function BookDetails({title, author, year, closeModal}){
 
     return(
         <div className="book_detail_main_container">
-            <div className="close" onClick={()=>closeModal}>
+            <div className="close" onClick={()=>closeModal()}>
                 <p>&times;</p>
             </div>
             <div className="book_detail_container">
@@ -14,10 +14,10 @@ export default function BookDetails({closeModal}){
                     <div className="book_cover_page_modal"></div>
                     {/* Book details */}
                     <div className="book_details_container_modal">
-                        <h2 className="book__title_modal">Introduction to Microcontrollers</h2>
+                        <h2 className="book__title_modal">{title}</h2>
                         <div className="book__author__year__styles_modal">
-                            <p className="book__author_modal">Author: Mbianou Bradon</p>
-                            <p className="book__year_modal">Year: 2023</p>
+                            <p className="book__author_modal">Author: {author}</p>
+                            <p className="book__year_modal">Year: {year}</p>
                         </div>
                     </div>
 

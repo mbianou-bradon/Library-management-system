@@ -2,7 +2,7 @@ import React from "react"
 import "./bookcard.css"
 import BookDetails from "../BookDetails/BookDetails"
 
-export default function BookCard() {
+export default function BookCard({title, author, year}) {
     const [isModalOpen, setIsModalOpen] = React.useState(false);
 
     const handleDetails = () =>{
@@ -13,7 +13,7 @@ export default function BookCard() {
 
     return(
         <>
-            { isModalOpen && <BookDetails closeModal={()=>closeModal()}/> }
+            { isModalOpen && <BookDetails title={title} author={author} year={year} closeModal={()=>closeModal()}/> }
             <div className="book_card_container">
             
                 <div className="book_card__subcontainer">
@@ -23,10 +23,10 @@ export default function BookCard() {
                     </div>
                     {/* Book details */}
                     <div className="book_details_container">
-                        <h2 className="book__title">Introduction to Microcontrollers</h2>
+                        <h2 className="book__title">{title}</h2>
                         <div className="book__author__year__styles">
-                            <p className="book__author">Author: Mbianou Bradon</p>
-                            <p className="book__year">Year: 2023</p>
+                            <p className="book__author">Author: {author}</p>
+                            <p className="book__year">Year: {year}</p>
                         </div>
                     </div>
 
