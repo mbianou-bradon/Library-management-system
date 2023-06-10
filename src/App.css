@@ -12,6 +12,8 @@
 }
 
 main {
+  height: 100vh;
   display: flex;
   margin-block-start: 5rem;
+  margin-block-end: auto;
 }

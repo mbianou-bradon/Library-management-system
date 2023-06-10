@@ -1,10 +1,15 @@
 import React from "react"
 import "./sideMenu.css"
+import { GoBook } from "react-icons/go"
+import { BsPersonFillExclamation, BsPersonFillSlash } from "react-icons/bs"
+import { FaBookReader } from "react-icons/fa"
 
 export default function SideMenu(){
+    const [isAdmin, setIsAdmin] = React.useState(true)
 
     return (
         <div className="sidebar_container">
+            { !isAdmin? 
             <div>
                 <div className="content__filtering">
                     <h2>Look for your perfect book</h2>
@@ -57,10 +62,32 @@ export default function SideMenu(){
                     </div>
                 </div>
             </div>
-
+            :
             <div>
-
+                <div className="content_navigation">
+                    <h2>Navigation</h2>
+                </div>
+                <ul className="navigation__links">
+                    <li>
+                        <GoBook className="nav_icon"/>
+                        All Books
+                    </li>
+                    <li>
+                        <FaBookReader className="nav_icon"/>
+                        Borrowed Books
+                    </li>
+                    <li>
+                        <BsPersonFillExclamation className="nav_icon"/>
+                        Sanctioned Students
+                    </li>
+                    <li>
+                        <BsPersonFillSlash className="nav_icon"/>
+                        Dismissed Students
+                    </li>
+                    {/* <BiSolidBookAdd/> */}
+                </ul>
             </div>
+            }
         </div>
     )
 }

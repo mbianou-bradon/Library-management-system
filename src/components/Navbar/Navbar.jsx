@@ -5,6 +5,7 @@ import { RxPerson } from "react-icons/rx"
 
 export default function Navbar(){
     const [isSignIn, setIsSignIn] = React.useState(false);
+    const [isAdmin, setIsAdmin] = React.useState(true);
 
     return (
         <nav>
@@ -32,7 +33,7 @@ export default function Navbar(){
                         :
                         <div className="user_detail_container">
                             <div className="username_container">
-                                <p>Mbianou bradon</p>
+                                <p>{isAdmin? "Admin" : "Mbianou bradon"}</p>
                             </div>
                             {/* Person Icon */}
                             <div className="icon_style">

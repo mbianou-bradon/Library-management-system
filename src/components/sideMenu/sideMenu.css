@@ -1,9 +1,9 @@
 .sidebar_container {
-    width: 40%;
+    width: 35%;
     padding-inline: 3rem;
     padding-block: 3rem;
 }
-.content__filtering {
+.content__filtering, .content_navigation {
     font-size: 0.8rem;
     margin-block-end: 2rem;
     text-align: center;
@@ -59,4 +59,30 @@
 }
 span {
     color: red;
+}
+
+.navigation__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.navigation__links > li{
+    cursor: pointer;
+    transition: 0.15s ease-in;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    margin-inline: auto;
+}
+.navigation__links > li:hover{
+    color: var(--primary-color);
+
+}
+
+.nav_icon {
+    font-size: 1.5rem;
 }

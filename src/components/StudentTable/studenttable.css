@@ -1,0 +1,50 @@
+.table_container {
+    width: 75%;
+    padding-inline-start : 4rem;
+    margin-block: 2rem;
+}
+
+table {
+    border: 1px solid var(--neutral-gray);
+    width: 100%;
+    padding-inline: 1rem;
+}
+
+thead th{
+    border-bottom: 1px solid var(--neutral-gray);
+}
+thead th:nth-child(1){
+    width: 15%;
+    padding-inline-start: 0.2rem;
+}
+
+thead th:nth-child(2){
+    width: 55%;
+
+}
+
+thead th:nth-child(3){
+    width: 15%;
+
+}
+
+thead th:nth-child(4){
+    width: 15%;
+
+}
+
+tbody td {
+    padding-block: 1rem;
+    padding-inline-start: 0.2rem;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgba(204, 204, 204, 0.5);
+}
+
+tbody tr:hover {
+    transform: scale(1.01);
+    background-color: var(--primary-color-dark);
+    color: white;
+
+}
